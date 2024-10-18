@@ -1,0 +1,108 @@
+.ripple-effect {
+  pointer-events: none;
+}
+
+.ripple-effect::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s linear;
+  opacity: 0;
+}
+
+.custombutton {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 18px 2px 2px; /* Adjusted padding to fit text */
+  height: 45px;
+  width: 160px; /* Fixed width to demonstrate fill effect */
+  background-color: #131923; /* Dark background */
+  color: #fff; /* Text color */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+.custombutton .icon-container {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 12px;
+  justify-content: space-around;
+  background-color: #B8F668; /* Neon green background */
+  height: calc(100% - 2px); /* Icon height slightly smaller to add the gap */
+  border-radius: 6px;
+  position: absolute;
+  left: 2px; /* Creates a 1px gap between the icon and the button */
+  top: 1px; /* Creates a 1px gap from the top */
+  bottom: 1px;
+  width: 35px; /* Starting width for 1 icon */
+  transition: width 0.7s ease; /* Smooth width transition */
+}
+
+.icon {
+  font-size: 18px;
+  color: #131923;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+}
+
+/* Show the first icon by default */
+.icon:first-child {
+  opacity: 1;
+}
+
+/* Fade-in for each icon */
+.custombutton:hover .icon:nth-child(2) {
+  opacity: 1;
+}
+
+.custombutton:hover .icon:nth-child(3) {
+  opacity: 1;
+}
+
+.custombutton:hover .icon:nth-child(4) {
+  opacity: 1;
+}
+
+.custombutton:hover .icon:nth-child(5) {
+  opacity: 1;
+}
+
+.custombutton:hover .icon:nth-child(6) {
+  opacity: 1;
+}
+
+/* Apply the animation on hover */
+.custombutton:hover .icon-container {
+  width: calc(
+    100% - 3px
+  ); /* Expand the container to 100% of the button width */
+}
+
+.custombutton .text {
+  margin-left: 40px; /* Add space between the icon and the text */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.custombutton:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}

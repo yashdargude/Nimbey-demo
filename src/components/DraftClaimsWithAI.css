@@ -1,0 +1,38 @@
+/* For .custom-margin-top */
+@media (min-width: 768px) and (max-width: 899px) {
+    .custom-margin-top {
+      margin-top: -51px !important;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 1149px) {
+    .custom-margin-top {
+      margin-top: -61px !important;
+    }
+  }
+  
+  @media (min-width: 1150px) {
+    .custom-margin-top {
+      margin-top: -71px !important;
+    }
+  }
+  
+  /* For .custom-margin-top-2 */
+  @media (min-width: 768px) and (max-width: 899px) {
+    .custom-margin-top-2 {
+      margin-top: 55px !important;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 1349px) {
+    .custom-margin-top-2 {
+      margin-top: 10px !important;
+    }
+  }
+  
+  @media (min-width: 1350px) {
+    .custom-margin-top-2 {
+      margin-top: -51px !important;
+    }
+  }
+  
