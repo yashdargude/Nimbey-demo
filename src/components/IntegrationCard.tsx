@@ -19,7 +19,7 @@ const Integrations: React.FC<IntegrationsProps> = ({
   imageWidth = "w-3/4",
 }) => {
   return (
-    <section className="bg-white w-[87.50%] mb-[40px] text-center mx-auto">
+    <section className="bg-white w-full md:w-[87.50%] mb-[40px] text-center mx-auto">
       {/* Title Section */}
       <h2
         className={`font-poppins font-semibold mb-4 text-[#212B36]" text-[26px] md:text-[36px]`}
@@ -29,7 +29,7 @@ const Integrations: React.FC<IntegrationsProps> = ({
 
       {/* Description Section */}
       <p
-        className={`font-public-sans font-medium ${descriptionColor} mb-12 mx-auto text-[16px] md:text-[20px] w-[408px] md:w-[592px]`}
+        className={`font-public-sans font-medium ${descriptionColor} mb-12 mx-auto pr-0 w-full  text-[16px] md:text-[20px] w-[408px] md:w-[592px]`}
       >
         {description}
       </p>

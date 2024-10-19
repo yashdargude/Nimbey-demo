@@ -49,7 +49,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({
   ], // Default cards data
 }) => {
   return (
-    <section className="py-10 md:py-20 px-8 bg-white w-[87.50%] mb-[40px] text-center">
+    <section className="py-10 md:py-20 lg:px-10 bg-white w-[87.50%] mb-[40px] text-center ">
       {/* Section Heading */}
       <h2
         className="text-3xl font-semibold mb-[40px]"

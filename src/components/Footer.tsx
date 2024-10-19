@@ -1,16 +1,17 @@
 import React from "react";
-import Nimbeyimg from "../assets/NimbeyLogoSidebar.png";
+import NimbeyimgW from "../assets/NimbeyLogoW.png";
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-2 md:pb-8 overflow-x-hidden">
+    <footer className="bg-gray-900 text-gray-300 py-10 md:py-2 md:pb-8 overflow-x-hidden">
       {/* Container for Logo and Main Sections */}
+
       <div className="container mx-auto px-4 md:px-16 flex flex-col md:flex-row justify-between">
         {/* Logo and Tagline */}
         <div className="md:ml-4 mb-6 md:mb-0 md:w-1/3 w-full">
           <img
-            src={Nimbeyimg}
+            src={NimbeyimgW}
             alt="nimbey logo"
-            className="h-7 md:h-8 w-auto"
+            className="h-6 w-21 md:h-8 "
           />
           <p className="mt-2 text-gray-400 whitespace-nowrap">
             Made in San Francisco ✨

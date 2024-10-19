@@ -4,7 +4,7 @@ interface InfoCardProps {
   title: string;
   description: string;
   imgSrc: string;
-  size?: "small" | "medium" | "large";
+  size?: "small" | "medium" | "large"; // Optional, but no longer affecting width
   imageWidth?: string;
   imageHeight?: string;
   titleFontSize?: string;
@@ -19,7 +19,6 @@ const InfoCard: React.FC<InfoCardProps> = ({
   title,
   description,
   imgSrc,
-  size = "medium",
   imageWidth = "30px", // Default image width
   imageHeight = "30px", // Default image height
   titleFontSize,
@@ -29,20 +28,9 @@ const InfoCard: React.FC<InfoCardProps> = ({
   titleColor,
   descriptionColor,
 }) => {
-  // Define size classes
-  const sizeClasses = {
-    small: "w-[300px]",
-    medium: "w-[413px]",
-    large: "w-[433px]", // Large size
-  };
-
-  // Apply consistent width for medium screens
-  const consistentWidthClass =
-    size === "medium" ? "w-full md:w-[413px]" : sizeClasses[size];
-
   return (
     <div
-      className={`group relative bg-white rounded-lg shadow-md flex flex-col items-center transform transition-transform duration-700 ${consistentWidthClass} hover:scale-105 hover:bg-[#212B36]`} // Card zoom effect + hover background color
+      className={`group relative bg-white rounded-lg shadow-md flex flex-col items-center transform transition-transform duration-700 w-full hover:scale-105 hover:bg-[#212B36] min-h-[180px] md:min-h-[240px]`} // Responsive min-height
       style={{
         boxShadow:
           "0 -6px 12px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05)", // Custom shadow for top and bottom
@@ -50,11 +38,11 @@ const InfoCard: React.FC<InfoCardProps> = ({
       }}
     >
       {/* Image and Title Container */}
-      <div className="flex items-center justify-center w-full h-[30px] mb-[25px]">
+      <div className="flex items-start justify-center w-full h-[30px] mb-[25px]">
         <img
           src={imgSrc}
           alt={title}
-          className="mr-4"
+          className="mr-2"
           style={{ width: imageWidth, height: imageHeight, objectFit: "cover" }} // Dynamic image size from props
         />
         <h3
@@ -80,6 +68,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
           wordWrap: "break-word", // Wrap long words
           overflowWrap: "break-word",
           textAlign: "center", // Center-align the description text
+          marginTop: "4px",
         }}
       >
         {description}

@@ -7,6 +7,7 @@ import DraftClaimsWithAI from "../components/DraftClaimsWithAI";
 import HowItWorks from "../components/HowItWorks";
 import Integrations from "../components/IntegrationCard";
 import WhyChooseNimbey from "../components/WhyChooseNimbey";
+import SuperchargeSection from "../components/SuperchargeSection"; // Import the SuperchargeSection
 
 const Home: React.FC = () => (
   <div className="w-full flex flex-col items-center">
@@ -66,6 +67,20 @@ const Home: React.FC = () => (
       viewport={{ once: true }} // Ensures animation plays only once
     >
       <WhyChooseNimbey />
+    </motion.div>
+    {/* SuperchargeSection Full Width */}
+    <motion.div
+      style={{
+        width: "100vw", // Force full viewport width
+
+        position: "relative", // Ensure positioning stays relative (no !important needed)
+      }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <SuperchargeSection />
     </motion.div>
   </div>
 );

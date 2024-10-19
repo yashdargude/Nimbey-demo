@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import NimbeyLogoWhite from "../../assets/NimbeyLogoSidebar.png"; // Import your logo
+import NimbeyLogoWhite from "../../assets/NimbeyLogoW.png"; // Import your logo
 
 interface SidebarProps {
   isOpen: boolean;

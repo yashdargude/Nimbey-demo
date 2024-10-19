@@ -18,9 +18,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageSrc = dashboardImage,
 }) => {
   return (
-    <section className="flex flex-col items-center text-center py-10 sm:py-16 bg-white w-[87.50%] mb-[40px]">
+    <section className="flex flex-col items-center sm:full lg:w-[87.5%] text-center py-10 sm:py-16 bg-white  mb-[40px]">
       {/* Main Heading - Supports Line Breaks in Both Mobile and Desktop Views */}
-      <h1 className="font-extrabold text-3xl sm:text-3xl md:text-5xl text-[#1B1B1B] leading-tight mb-6 sm:mb-8">
+      <h1 className="font-extrabold text-3xl sm:text-[26px] sm:mb-8  md:text-5xl text-[#1B1B1B] leading-tight mb-6 ">
         {/* Split the heading based on <br /> and render with a 30px gap */}
         {mainHeading.split("<br />").map((text, index) => (
           <span
@@ -50,7 +50,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       </p>
 
       {/* Call to Action Button - Default or Custom Text */}
-      <button className="custombutton z-10 relative">
+      <button className="custombutton z-10 relative ">
         <span className="icon-container">
           <span className="icon">›</span>
           <span className="icon">›</span>
@@ -59,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <span className="icon">›</span>
           <span className="icon">›</span>
         </span>
-        <span className="text">{buttonText}</span>
+        <span className="text ">{buttonText}</span>
       </button>
 
       {/* Dashboard Image - Default or Custom Image */}

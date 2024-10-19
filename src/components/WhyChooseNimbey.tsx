@@ -51,7 +51,7 @@ const WhyChooseNimbey: React.FC<WhyChooseNimbeyProps> = ({
   descriptionColor = "text-gray-600",
 }) => {
   return (
-    <section className="py-10 md:py-20 px-8 bg-white w-[87.50%] mb-[40px] text-center">
+    <section className="py-10 md:py-20  bg-white w-[87.50%] mb-[40px] text-center">
       {/* Title Section */}
       <div
         className={`${titleSize} font-poppins font-semibold mb-[16px] ${titleColor}`}
